@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Free Courses &reg;</h1>
+
+
+<div class="row" style="padding : 50px;">
+
+    {% for product in products %}
+
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem; height : 20rem">
+            <img width="18rem" height="150rem" src="{{ product.image_url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name}}</h5>
+                <p class="card-text">{{ product.time}}</p>
+                <a href="{{ product.video_url }}" class="btn btn-primary stretched-link">Start Learning</a>
+            </div>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</div>
+{% endblock %}
+
+
